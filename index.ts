@@ -17,8 +17,8 @@ dotenv.config();
 app.use(express.json());
 
 const limiter = rateLimit({
-  windowMs: 5 * 60 * 1000, // 15 minutes
-  max: 10, // 100 requests per window
+  //windowMs: 5 * 60 * 1000, // 15 minutes
+  max: 10000, // 100 requests per window
   message: "Too many requests, please try again later.",
 });
 if (process.env.RATE_LIMIT === "true") {
